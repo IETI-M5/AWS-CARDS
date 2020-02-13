@@ -18,3 +18,12 @@ Este juego será una **aplicación** cargará un mazo de 5 cartas, estas cartas 
 - Creacion del menú, dónde aparezcan las opciones (funcionales cargar cartas, cargas cartas Enemigo).
 - Cargas cartas del fichero XML en Python.
 
+## FASE 2 *12/03/2020*
+
+- Creación de las funcionalidades de creaciones de los mazos (defensivos, ofensivos, aleatorios, equilibrado).
+- Creación de la funcionalidad de luchar JcJ.
+
+## FASE 3 *12/03/2020*
+
+- Creación de la funcionalidad de lucha de JcE.
+- Creación de la funcionalidad de lucha con competición (liga), JvE.
