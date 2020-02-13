@@ -3,7 +3,7 @@
 ## Colaboradores
   - Adria Aranda
   - Aaron Marcos
-  - Adrian Paredes
+  - Adrian Pradas
   - David Castilla
 
 ## PROYECTO
