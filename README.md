@@ -27,3 +27,4 @@ Este juego será una **aplicación** cargará un mazo de 5 cartas, estas cartas 
 
 - Creación de la funcionalidad de lucha de JcE.
 - Creación de la funcionalidad de lucha con competición (liga), JvE.
+
