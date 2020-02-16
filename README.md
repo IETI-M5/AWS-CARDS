@@ -2,7 +2,7 @@
 
 ## Colaboradores
   - Adria Aranda
-  - Aaron Marcos
+  - Aaron
   - Adrian Pradas
   - David Castilla
 
