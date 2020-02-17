@@ -14,6 +14,7 @@ while a != False:
     print("11) Luchar Jugador VS Jugador")
     print("12) Luchar Jugador VS Bot (Arcade)")
     print("13) Luchar Jugador VS Bot (liga)")
+
     try:
         opc = int(input("Que opcion quieres utilizar? "))
     except ValueError:
