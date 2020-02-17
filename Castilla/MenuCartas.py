@@ -1,11 +1,3 @@
-from xml.dom import minidom
-listacartas = []
-
-def cargarCartas():
-    fichero = minidom.parse("./XML/mybaraja.xml")
-    return fichero
-
-
 
 a = True
 while a != False:
@@ -31,9 +23,7 @@ while a != False:
         opc = int(input("Que opcion quieres utilizar? "))
 
     if opc == 1:
-        cargarCartas(listacartas)
-        print(listacartas)
-        break
+        
     if opc == 2:
         print("Estas en la opción 2")
     '''

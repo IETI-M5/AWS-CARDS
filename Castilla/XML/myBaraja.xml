@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE PlayerConfig SYSTEM "ieti_card_game.dtd">
+<!DOCTYPE PlayerConfig SYSTEM "IETI_Card_Game.DTD">
 <PlayerConfig>
     <playerLife>
         10
