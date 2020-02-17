@@ -29,14 +29,20 @@ def cargar_cartas(sujeto):
         global myBaraja
         try:
             myBaraja = ET.parse('myBaraja.xml')
-            return 1
+            if(myBaraja.getroot().tag == "PlayerConfig"):
+                return 1
+            else:
+                return 2
         except FileNotFoundError:
             return 0
     elif(sujeto == 1):
         global Enemigo
         try:
             Enemigo = ET.parse('Enemigo.xml')
-            return 1
+            if (myBaraja.getroot().tag == "PlayerConfig"):
+                return 1
+            else:
+                return 2
         except FileNotFoundError:
             return 0
 
@@ -86,17 +92,23 @@ def menu():
 
         if(opt == 1):
             print("Cargando mi baraja...")
-            if(cargar_cartas(0)):
+            out = cargar_cartas(0)
+            if(out):
                 print("Mi baraja cargada!", end="\n\n")
                 state = 1
-            else:
+            elif (out == 0):
                 print("ERROR! Archivo no encontrado! (myBaraja.xml)")
+            elif (out == 2):
+                print("ERROR! La raiz del archivo (myBaraja.xml) no coincide!")
         elif(opt == 2):
             print("Cargando baraja enemiga...")
-            if(cargar_cartas(1)):
+            out = cargar_cartas(1)
+            if(out):
                 print("Baraja enemiga cargada!", end="\n\n")
                 state = 1
-            else:
+            elif (out == 0):
                 print("ERROR! Archivo no encontrado! (Enemigo.xml)")
+            elif (out == 2):
+                print("ERROR! La raiz del archivo (Enemigo.xml) no coincide!")
 
 menu()
