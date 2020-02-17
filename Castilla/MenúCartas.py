@@ -22,8 +22,11 @@ def cargarCartas(listacartas):
         listacartas.append(listacarta)
     return listacartas
 
+
+
 a = True
 while a != False:
+    print("MENU")
     print("1) Cargar cartas")
     print("2) Cargar cartas Enemigo")
     '''
@@ -38,7 +41,11 @@ while a != False:
     print("11) Luchar Jugador VS Jugador")
     print("12) Luchar Jugador VS Bot (Arcade)")
     print("13) Luchar Jugador VS Bot (liga)")'''
-    opc = int(input("Que opcion quieres utilizar?: "))
+    try:
+        opc = int(input("Que opcion quieres utilizar? "))
+    except ValueError:
+        print("Opcion invalida, introduce una de las opciones anterior")
+        opc = int(input("Que opcion quieres utilizar? "))
 
     if opc == 1:
         cargarCartas(listacartas)
