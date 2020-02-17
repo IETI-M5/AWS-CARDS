@@ -1,26 +1,9 @@
 from xml.dom import minidom
 listacartas = []
 
-def cargarCartas(listacartas):
-    fichero = minidom.parse("./XML/Cartas.xml")
-    cartas = fichero.getElementsByTagName("card")
-
-    for carta in cartas:
-        listacarta = []
-        tipo = carta.getAttribute("type")
-        nombre = carta.getElementsByTagName("name")[0]
-        descripcion = carta.getElementsByTagName("description")[0]
-        ataque = carta.getElementsByTagName("attack")[0]
-        defensa = carta.getElementsByTagName("defense")[0]
-        invocacion = carta.getAttribute("summonPoints")
-        listacarta.append(tipo)
-        listacarta.append(nombre.firstChild.data.lstrip().rstrip())
-        listacarta.append(descripcion.firstChild.data.lstrip().rstrip())
-        listacarta.append(ataque.firstChild.data.lstrip().rstrip())
-        listacarta.append(defensa.firstChild.data.lstrip().rstrip())
-        listacarta.append(invocacion)
-        listacartas.append(listacarta)
-    return listacartas
+def cargarCartas():
+    fichero = minidom.parse("./XML/mybaraja.xml")
+    return fichero
 
 
 
