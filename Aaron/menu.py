@@ -39,7 +39,7 @@ def cargar_cartas(sujeto):
         global Enemigo
         try:
             Enemigo = ET.parse('./XML/Enemigo.xml')
-            if (myBaraja.getroot().tag == "PlayerConfig"):
+            if(baraja_local.getroot().tag == "PlayerConfig"):
                 return 1
             else:
                 return 2
@@ -51,68 +51,68 @@ def menu():
     while True:
         while True:
             if(state == 0):
-                print(str("***************************").rjust(100))
-                print(str("* 1. Cargar cartas        *").rjust(100))
-                print(str("* 2. Carga cartas Enemigo *").rjust(100))
-                print(str("***************************").rjust(100))
+                print("***************************")
+                print("* 1. Cargar cartas        *")
+                print("* 2. Carga cartas Enemigo *")
+                print("***************************")
                 #print("99. TEST FUNCTION")
             elif(state == 1):
-                print((str("**************************************").rjust(100)))
-                print((str("* 1. Cargar cartas                   *").rjust(100)))
-                print((str("* 2. Carga cartas Enemigo            *").rjust(100)))
-                print(str("* 3. Crear mazo aleatorio            *").rjust(100))
-                print(str("* 4. Crear mazo ofensivo             *").rjust(100))
-                print(str("* 5. Crear mazo defensivo            *").rjust(100))
-                print(str("* 6. Crear mazo equilibrado          *").rjust(100))
-                print((str("* 7. Crear mazo aleatorio Enemigo    *").rjust(100)))
-                print(str("* 8. Crear mazo ofensivo Enemigo     *").rjust(100))
-                print(str("* 9. Crear mazo defensivo Enemigo    *").rjust(100))
-                print(str("* 10. Crear mazo equilibrado Enemigo *").rjust(100))
-                print(str("* 11. Luchar Jugador vs Jugador      *").rjust(100))
-                print(str("* 12. Luchar Jugador vs Bot (arcade) *").rjust(100))
-                print(str("* 13. Luchar Jugador vs Bot (liga)   *").rjust(100))
-                print(str("**************************************").rjust(100))
+                print("**************************************")
+                print("* 1. Cargar cartas                   *")
+                print("* 2. Carga cartas Enemigo            *")
+                print("* 3. Crear mazo aleatorio            *")
+                print("* 4. Crear mazo ofensivo             *")
+                print("* 5. Crear mazo defensivo            *")
+                print("* 6. Crear mazo equilibrado          *")
+                print("* 7. Crear mazo aleatorio Enemigo    *")
+                print("* 8. Crear mazo ofensivo Enemigo     *")
+                print("* 9. Crear mazo defensivo Enemigo    *")
+                print("* 10. Crear mazo equilibrado Enemigo *")
+                print("* 11. Luchar Jugador vs Jugador      *")
+                print("* 12. Luchar Jugador vs Bot (arcade) *")
+                print("* 13. Luchar Jugador vs Bot (liga)   *")
+                print("**************************************")
 
-            opt = input(str("Selecciona una opcion: ").rjust(100))
+            opt = input("Selecciona una opcion: ")
 
             if (state == 0):
                 try:
                     opt = int(opt)
                     if (opt < 1 or opt > 2):
-                        print(str("Opcion invalida!", end="\n\n").rjust(100))
+                        print("Opcion invalida!", end="\n\n")
                     else:
                         break
                 except ValueError:
-                    print(str("Solo se puede seleccionar opciones numericas!").rjust(100))
+                    print("Solo se puede seleccionar opciones numericas!")
             elif (state == 1):
                 try:
                     opt = int(opt)
                     if (opt < 1 or opt > 13):
-                        print(str("Opcion invalida!", end="\n\n").rjust(100))
+                        print("Opcion invalida!", end="\n\n")
                     else:
                         break
                 except ValueError:
-                    print(str("Solo se puede seleccionar opciones numericas!").rjust(100))
+                    print("Solo se puede seleccionar opciones numericas!")
 
         if(opt == 1):
-            print(str("Cargando mi baraja...").rjust(100))
+            print("Cargando mi baraja...")
             out = cargar_cartas(0)
             if(out):
-                print(str("Mi baraja cargada!").rjust(100), end="\n\n")
+                print(("Mi baraja cargada!"), end="\n\n")
                 state = 1
             elif (out == 0):
-                print(str("ERROR! Archivo no encontrado! (myBaraja.xml)").rjust(100))
+                print("ERROR! Archivo no encontrado! (myBaraja.xml)")
             elif (out == 2):
-                print(str("ERROR! La raiz del archivo (myBaraja.xml) no coincide!").rjust(100))
+                print("ERROR! La raiz del archivo (myBaraja.xml) no coincide!")
         elif(opt == 2):
-            print(str("Cargando baraja enemiga...").rjust(100))
+            print("Cargando baraja enemiga...")
             out = cargar_cartas(1)
             if(out):
-                print(str("Baraja enemiga cargada!", end="\n\n").rjust(100))
+                print("Baraja enemiga cargada!", end="\n\n")
                 state = 1
             elif (out == 0):
-                print(str("ERROR! Archivo no encontrado! (Enemigo.xml)").rjust(100))
+                print("ERROR! Archivo no encontrado! (Enemigo.xml)")
             elif (out == 2):
-                print(str("ERROR! La raiz del archivo (Enemigo.xml) no coincide!").rjust(100))
+                print("ERROR! La raiz del archivo (Enemigo.xml) no coincide!")
 
 menu()
