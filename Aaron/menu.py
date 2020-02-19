@@ -39,7 +39,7 @@ def cargar_cartas(sujeto):
         global Enemigo
         try:
             Enemigo = ET.parse('./XML/Enemigo.xml')
-            if(baraja_local.getroot().tag == "PlayerConfig"):
+            if(Enemigo.getroot().tag == "PlayerConfig"):
                 return 1
             else:
                 return 2
