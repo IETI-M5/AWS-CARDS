@@ -55,7 +55,6 @@ def menu():
                 print("* 1. Cargar cartas        *")
                 print("* 2. Carga cartas Enemigo *")
                 print("***************************")
-                #print("99. TEST FUNCTION")
             elif(state == 1):
                 print("**************************************")
                 print("* 1. Cargar cartas                   *")
