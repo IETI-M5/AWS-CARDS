@@ -68,9 +68,6 @@ def menu():
                 print("* 8. Crear mazo ofensivo Enemigo     *")
                 print("* 9. Crear mazo defensivo Enemigo    *")
                 print("* 10. Crear mazo equilibrado Enemigo *")
-                print("* 11. Luchar Jugador vs Jugador      *")
-                print("* 12. Luchar Jugador vs Bot (arcade) *")
-                print("* 13. Luchar Jugador vs Bot (liga)   *")
                 print("**************************************")
 
             opt = input("Selecciona una opcion: ")
@@ -87,7 +84,7 @@ def menu():
             elif (state == 1):
                 try:
                     opt = int(opt)
-                    if (opt < 1 or opt > 13):
+                    if (opt < 1 or opt > 10):
                         print("Opcion invalida!", end="\n\n")
                     else:
                         break
